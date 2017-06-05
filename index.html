@@ -10,41 +10,53 @@
 
   </head>
   <body>
-    <section class="container-fluid"><!-- contenedor general-->
+    <section class="container"><!-- contenedor general-->
 
-
-      <!-- Modal Trigger -->
-      <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
-
-      <!-- Modal Structure -->
+      <!-- area de texto del modal --->
+      <section  class="container">
+        <!-- Modal -->
         <div id="modal1" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <form class="" action="index.html" method="post">
-              <label for=""> Nombre</label>
-              <input type="text" name="nombre" value="">
-              <label for="">Telefono</label>
-              <input type="text" name="telefono" value="">
-              <button class="modal-action modal-close" type="button" name="button">Enviar</button>
+          <div class="modal-content ">
+            <form id="formularioContenedor">
+              <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" class="form-control" rows="3" >
+                <label for="telefono">Telefono:</label>
+                <input type="tel" name="telefonos"  id="telefono" >
+              </div>
+
+              <button type="submit" id="boton" class="btn btn-default">Agregar</button>
             </form>
           </div>
         </div>
+      </section>
 
-        <!-- Area de boton fijo ---->
-        <div class="fixed-action-btn modal-trigger" >
-          <a class="btn-floating btn-large red ">
-            <i class="large material-icons">open_in_new</i>
-          </a>
+
+      <!-- Area donde se agregara los contactos -->
+      <section>
+        <span id="numerador"></span>
+        <div id="contacto" class="container">
+          <article class="card" id="marcador">
+          <!--  <input id="marcador" type="text" name="" >-->
+          </article>
         </div>
+      </section>
 
 
 
 
+    </section>
+    <!-- Area de boton fijo ---->
+    <div class="fixed-action-btn " >
+      <a class="btn-floating btn-large red modal-trigger " href="#modal1">
+        <i class="large material-icons">open_in_new</i>
+      </a>
+    </div>
 
 
     <script  type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
-
   </body>
 </html>
