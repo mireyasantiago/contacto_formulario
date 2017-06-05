@@ -2,7 +2,14 @@
 
     left: 23px;
 }*/
+body  {
+	
+	background-color: DarkSeaGreen  ;
+	/*background-image: url("img/contactos.jpg");*/
+}
 
-#izquierda{
-  left: 23px;
+
+.circle {
+    border-radius: 25%;
+
 }
