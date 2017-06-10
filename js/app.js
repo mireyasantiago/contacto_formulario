@@ -6,6 +6,11 @@
     var cargarPagina = function () {
         var formulario = $("#formularioContenedor");
         formulario.submit(contactosNuevos); 
+
+        var modalAbrir= $(".modal-trigger");
+        modalAbrir.click(modal);
+        
+
         
        /* var contactosEliminar = $("#contacto");
         contactosEliminar.click(eliminar);*/
@@ -28,12 +33,9 @@
 
 		// se crean los elementos
 		var caja = $("<article/>", {'class': 'card blue-grey darken-1'});
-		var parrafo = $("<p/>");
-		var telefono = $("<p/>");
-        var eliminar = $("<input type='button' value='cerrar'/>" ,  { 'class': 'boton__cerrar'});
-
-  
-     
+		var parrafo = $("<p  />");
+		var telefono = $("<p  />" );
+        var eliminar = $("<input type='button' value='cancelar'/>" ,  { 'class': 'botonCancelar' });
     
 		parrafo.text(nombreContacto);
 		telefono.text(telefonoContacto);
@@ -49,12 +51,27 @@
 		nombreContenedor.val("");
 		telefonoContenedor.val("");
 	};
-
+	
     /*var eliminar = function () {
     $(this).parent().remove();
     // para actualizar el contador
     //cantidadContactos();
     };*/
+    var modal = function(){
+    	$('.modal').modal();
+
+       
+    
+    /*var botonEnviar = $("#boton");
+    
+    if($(this).val().trim().length > 0) {
+      botonEnviar.removeAttr("disabled");
+    } else {
+      botonEnviar.attr("disabled", true);
+    }*/
+};
+    
+
     
 
     $(document).ready(cargarPagina);
